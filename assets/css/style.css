@@ -44,7 +44,14 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
-
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure this is behind other content */
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
