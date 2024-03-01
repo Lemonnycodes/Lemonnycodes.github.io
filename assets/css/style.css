@@ -1,13 +1,4 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -932,6 +923,13 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#introduction p {
+  font-weight: normal; /* Sets the font to normal, not bold */
+  font-size: 1.2em; /* Adjust this value to increase or decrease the size */
+  color: #FFFFFF; /* This is white, change the hex code to the color you prefer */
+  text-transform: none; /* Ensures the text is not capitalized */
+  font-family: 'Arial', sans-serif; /* Choose your preferred font-family */
+}
 .contact .info-box {
   color: #444444;
   padding: 20px;
