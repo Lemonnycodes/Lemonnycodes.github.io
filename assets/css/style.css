@@ -490,53 +490,44 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-#skills .icon-box {
-  color: #444444;
+#skills .project-card,
+#certifications .project-card {
+  background-color: #000000; /* Dark background color */
+  border-radius: 10px;
   padding: 20px;
-  width: 60%;
-  background: #0D0D0D;
-  margin-bottom: 20px;
+  margin: 10px 0;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.2);
+  color: #ffffff; /* White text color */
+  transition: transform 0.3s ease;
 }
 
-#skills .icon-box h4 {
-  font-size: 26px;
-  color: #a44cbe;
-  font-weight: 700;
-  margin-bottom: 10px;
+#skills .project-card:hover,
+#certifications .project-card:hover {
+  transform: translateY(-10px);
 }
 
-#skills .icon-box p {
-  padding: 0;
-  color: #fff;
-  line-height: 30px;
-  font-size: 20px;
-  margin: 0;
+#skills .project-info h4,
+#certifications .project-info h4 {
+  margin: 0 0 10px;
+  font-size: 20px; /* Adjust title font size */
+  font-weight: 600;
+  color: #a44cbe; /* Purple color for project title */
 }
 
-#skills, #licenses {
-  color: #fff; /* Change this color as needed */
-  font-size: 16px; /* Adjust this size as needed */
+#skills .project-info p,
+#certifications .project-info p {
+  margin: 0 0 20px;
+  font-size: 16px; /* Adjust description font size */
+  color: #d1d1d1;
 }
 
-/*--------------------------------------------------------------
-# L&C
---------------------------------------------------------------*/
-#certifications .certifications-box .icon-box {
-  padding: 5px; /* Adjust as needed */
+#skills .project-info h5,
+#certifications .project-info h5 {
+  margin: 0 0 10px;
+  font-size: 18px; /* Adjust subtitle font size */
+  font-weight: 500;
+  color: #ffffff; /* White color for subtitles */
 }
-
-#certifications .certifications-box {
-  padding-left: 5px; /* Adjust as needed */
-  padding-right: 5px; /* Adjust as needed */
-}
-#certifications .row {
-  padding-left: 25px; /* Adjust as needed */
-  margin-left: 0; /* Removes Bootstrap's default negative margin on the row */
-}
-
-
 
 
 /*--------------------------------------------------------------
