@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 0; /* Ensure this is behind other content */
 }
 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -370,9 +371,31 @@ section .container {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
+#about {
+  padding-top: 60px; /* Adjust this value to move the content slightly down */
+  background: #010e1b; /* Ensure the background color remains consistent */
+}
+
+#about .container {
+  padding-top: 20px; /* You can also adjust this value as needed */
+}
+
+#about .section-title h2 {
+  font-size: 28px; /* Decreased font size for better legibility */
+  color: #ffffff; /* Set color to white */
+  font-weight: normal; /* Remove bold effect */
+  margin-bottom: 20px; /* Add margin to create space below the title */
+  margin-top: 20px; /* Add margin to create space above the title */
+}
+
+/* Ensure uniform size for all images */
+.about-me img, .education img {
+  width: 100%;
+  height: auto; /* Keep auto to retain original aspect ratio */
+  object-fit: cover; /* Ensure the images are uniformly sized and cover the area */
+}
+
+/* Existing styles */
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -398,64 +421,6 @@ section .container {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  padding: 70px 0 60px;
-}
-
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: rgba(255, 255, 255, 0);
-}
-
-.counts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0);
-  padding: 12px;
-  color: #a44cbe;
-  border-radius: 50px;
-}
-
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #fff;
-}
-
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-}
-
-/* About Me */
-.about-me .content h3, .about-me .content p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px; /* Increase this to tweak the size */
-}
-
-.about-me .content ul li {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px; /* Increase this to tweak the size */
-}
-
-.magic-line {
-  text-align: justify;  /* Justify the content */
-  color: #E1A2B8 ;  /* Change the text color to tomato */
-  font-style: italic;  /* Make the text italic */
-}
-
 /* Education */
 .education .icon-box h3, .education .icon-box h4, .education .icon-box p {
   font-weight: 700;
@@ -478,7 +443,6 @@ section .container {
   margin-bottom: 0;
 }
 
-/* Education */
 .education-box {
   display: flex;
   align-items: flex-start;
@@ -488,6 +452,23 @@ section .container {
   max-width: 100px;
   height: auto;
   margin-right: 20px;
+}
+
+#skills {
+  padding-top: 60px; /* Adjust this value to move the content slightly down */
+  background: #010e1b; /* Ensure the background color remains consistent */
+}
+
+#skills .container {
+  padding-top: 20px; /* You can also adjust this value as needed */
+}
+
+#skills .section-title h2 {
+  font-size: 30px; /* Increased font size for better legibility */
+  color: #ffffff; /* Set color to white */
+  font-weight: normal; /* Remove bold effect */
+  margin-bottom: 20px; /* Add margin to create space below the title */
+  margin-top: 20px; /* Add margin to create space above the title */
 }
 
 #skills .project-card,
@@ -528,6 +509,7 @@ section .container {
   font-weight: 500;
   color: #ffffff; /* White color for subtitles */
 }
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -753,9 +735,138 @@ section .container {
   color: #a44cbe;
 }
 
+
+
 /*--------------------------------------------------------------
-# Portfolio
+# Contact
 --------------------------------------------------------------*/
+#contacts {
+  padding-top: 60px; /* Adjust this value to move the content slightly down */
+}
+
+#contacts .container {
+  padding-top: 20px; /* You can also adjust this value as needed */
+}
+
+#introduction p {
+  font-weight: normal; /* Sets the font to normal, not bold */
+  font-size: 1.2em; /* Adjust this value to increase or decrease the size */
+  color: #FFFFFF; /* This is white, change the hex code to the color you prefer */
+  text-transform: none; /* Ensures the text is not capitalized */
+  font-family: 'Arial', sans-serif; /* Choose your preferred font-family */
+}
+
+.contact .info-box {
+  color: #444444;
+  padding: 20px;
+  width: 100%;
+  background: #0D0D0D;
+}
+
+.contact .info-box i.bx {
+  font-size: 24px;
+  color: #dee2e6;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: rgba(255, 255, 255, 0);
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #a44cbe;
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+
+.contact .info-box p {
+  padding: 0;
+  color: #fff;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+
+.contact .info-box .social-links {
+  margin: 5px 0 0 68px;
+  display: flex;
+}
+
+.contact .info-box .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.contact .info-box .social-links a:hover {
+  color: #a44cbe;
+}
+
+/* Additional styling to improve legibility */
+#contacts .section-title h2 {
+  font-size: 32px; /* Increased font size for better legibility */
+  color: #a44cbe; /* Ensure color matches the theme */
+  font-weight: 700; /* Make the title bold */
+  margin-bottom: 20px; /* Add margin to create space below the title */
+}
+
+
+/*--------------------------------------------------------------
+# Credits
+--------------------------------------------------------------*/
+.credits {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  font-size: 13px;
+  color: #fff;
+  z-index: 1;
+}
+
+.credits a {
+  color: #a44cbe;
+  transition: 0.3s;
+}
+
+.credits a:hover {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .credits {
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+  }
+}
+#portfolio {
+  padding-top: 60px; /* Adjust this value to move the content slightly down */
+  background: #010e1b; /* Ensure the background color remains consistent */
+}
+
+#portfolio .container {
+  padding-top: 20px; /* You can also adjust this value as needed */
+}
+
+#portfolio .section-title h2 {
+  font-size: 28px; /* Font size for better legibility */
+  color: #ffffff; /* Set color to white */
+  font-weight: normal; /* Remove bold effect */
+  margin-bottom: 20px; /* Add margin to create space below the title */
+  margin-top: 20px; /* Add margin to create space above the title */
+}
+
+/* Ensure uniform size for all portfolio images */
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the images are uniformly sized and cover the area */
+}
+
+/* Existing styles */
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -885,7 +996,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #63eda3;
+  color: #bd0eb9;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -908,93 +1019,4 @@ section .container {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
-}
-
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-#introduction p {
-  font-weight: normal; /* Sets the font to normal, not bold */
-  font-size: 1.2em; /* Adjust this value to increase or decrease the size */
-  color: #FFFFFF; /* This is white, change the hex code to the color you prefer */
-  text-transform: none; /* Ensures the text is not capitalized */
-  font-family: 'Arial', sans-serif; /* Choose your preferred font-family */
-}
-
-.contact .info-box {
-  color: #444444;
-  padding: 20px;
-  width: 100%;
-  background: #0D0D0D;
-}
-
-.contact .info-box i.bx {
-  font-size: 24px;
-  color: #dee2e6;
-  border-radius: 50%;
-  padding: 14px;
-  float: left;
-  background: rgba(255, 255, 255, 0);
-}
-
-.contact .info-box h3 {
-  font-size: 20px;
-  color: #a44cbe;
-  font-weight: 700;
-  margin: 10px 0 8px 68px;
-}
-
-.contact .info-box p {
-  padding: 0;
-  color: #fff;
-  line-height: 24px;
-  font-size: 14px;
-  margin: 0 0 0 68px;
-}
-
-.contact .info-box .social-links {
-  margin: 5px 0 0 68px;
-  display: flex;
-}
-
-.contact .info-box .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  color: #fff;
-  line-height: 1;
-  margin-right: 12px;
-  transition: 0.3s;
-}
-
-.contact .info-box .social-links a:hover {
-  color: #a44cbe;
-}
-
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  font-size: 13px;
-  color: #fff;
-  z-index: 1;
-}
-
-.credits a {
-  color: #a44cbe;
-  transition: 0.3s;
-}
-
-.credits a:hover {
-  color: #fff;
-}
-
-@media (max-width: 992px) {
-  .credits {
-    left: 50%;
-    right: 0;
-    transform: translateX(-50%);
-  }
 }
