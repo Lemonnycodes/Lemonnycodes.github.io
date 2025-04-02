@@ -1,3 +1,125 @@
+/* =============================
+   Swathi's Portfolio CSS (Full)
+   ============================= */
+
+/* Dark/Light Mode Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background-color: #a44cbe;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #8713a2;
+}
+
+/* Light Theme Styles */
+body.light-mode {
+  background: #f5f5f5;
+  color: #222;
+}
+
+body.light-mode a {
+  color: #222;
+}
+
+body.light-mode a:hover {
+  color: #8713a2;
+}
+
+body.light-mode #header h1 a,
+body.light-mode #header h2,
+body.light-mode #header h2 span {
+  color: #222 !important;
+  border-color: #8713a2;
+}
+
+body.light-mode .nav-menu a,
+body.light-mode .mobile-nav a {
+  color: #222;
+}
+
+body.light-mode .nav-menu a:hover,
+body.light-mode .mobile-nav a:hover {
+  color: #8713a2;
+}
+
+body.light-mode .portfolio .portfolio-wrap,
+body.light-mode .project-card,
+body.light-mode .info-box {
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 10px 29px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .portfolio .portfolio-info h4,
+body.light-mode .project-info h4,
+body.light-mode .info-box h3 {
+  color: #8713a2;
+}
+
+body.light-mode .section-title h2,
+body.light-mode .section-title p {
+  color: #222;
+}
+
+body.light-mode .portfolio .portfolio-info p,
+body.light-mode .project-info p,
+body.light-mode .info-box p {
+  color: #444;
+}
+
+/* AOS Animations */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(20px);
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+}
+
+[data-aos="fade-in"] {
+  transform: scale(0.98);
+}
+
+[data-aos="fade-in"].aos-animate {
+  transform: scale(1);
+}
+
+/* Portfolio Filter Transition */
+.portfolio .portfolio-item {
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.portfolio .portfolio-item.hide {
+  transform: scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portfolio .portfolio-item:nth-child(1) { transition-delay: 0.1s; }
+.portfolio .portfolio-item:nth-child(2) { transition-delay: 0.2s; }
+.portfolio .portfolio-item:nth-child(3) { transition-delay: 0.3s; }
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
