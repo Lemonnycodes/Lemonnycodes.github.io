@@ -14,11 +14,31 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .toggle-darkmode {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 999;
+    }
+  </style>
 </head>
 
 <body>
+  <button class="toggle-darkmode" onclick="toggleDarkMode()">Toggle Mode</button>
   <div id="particles-js"></div>
-  <header id="header" class="header-tops">
+  <header id="header" class="header-tops" data-aos="fade-down">
     <div class="container text-center">
       <h1><a href="index.html">Swathi Dharma Sankaran</a></h1>
       <h2 style="color:#d736d2">I <span class="typing" style="color: #9F2BC1"></span></h2>
@@ -34,7 +54,7 @@
     </div>
   </header>
 
-  <section id="about" class="about container">
+  <section id="about" class="about container" data-aos="fade-up">
     <div class="section-title">
       <h2>About</h2>
     </div>
@@ -50,13 +70,19 @@
     </div>
   </section>
 
-  <section id="portfolio" class="portfolio container">
+  <section id="portfolio" class="portfolio container" data-aos="fade-up">
     <div class="section-title">
       <h2>Projects</h2>
     </div>
+    <div class="row justify-content-center mb-4">
+      <div class="col-auto">
+        <button class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
+        <button class="btn btn-outline-secondary filter-btn" data-filter="ml">ML</button>
+        <button class="btn btn-outline-success filter-btn" data-filter="web">Web App</button>
+      </div>
+    </div>
     <div class="row portfolio-container">
-      <!-- Example Project Card -->
-      <div class="col-lg-4 col-md-6 portfolio-item">
+      <div class="col-lg-4 col-md-6 portfolio-item ml">
         <div class="portfolio-wrap">
           <img src="assets/img/project/firee.jpeg" class="img-fluid" alt="Fire Evacuation">
           <div class="portfolio-info">
@@ -67,11 +93,11 @@
           </div>
         </div>
       </div>
-      <!-- More projects here -->
+      <!-- More project cards with class="ml" or "web" -->
     </div>
   </section>
 
-  <section id="skills" class="services container">
+  <section id="skills" class="services container" data-aos="fade-up">
     <div class="section-title">
       <h2>Skills</h2>
     </div>
@@ -87,7 +113,7 @@
     </div>
   </section>
 
-  <section id="contacts" class="contact container">
+  <section id="contacts" class="contact container" data-aos="fade-up">
     <div class="section-title">
       <h2>Contact</h2>
     </div>
@@ -111,13 +137,15 @@
     </div>
   </section>
 
-  <!-- JS -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/particles.js"></script>
   <script>
+    AOS.init();
+
     var typed = new Typed('.typing', {
       strings: ["Build Websites", "am a Data-Story Teller", "am an Open-Source Contributor"],
       loop: true,
@@ -126,23 +154,40 @@
     });
 
     particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 60 },
-        "shape": { "type": "star" },
-        "opacity": { "value": 0.5 },
-        "size": { "value": 5 },
-        "line_linked": { "enable": true, "color": "#ffffff" },
-        "move": { "enable": true, "speed": 3 }
+      particles: {
+        number: { value: 60 },
+        shape: { type: "star" },
+        opacity: { value: 0.5 },
+        size: { value: 5 },
+        line_linked: { enable: true, color: "#ffffff" },
+        move: { enable: true, speed: 3 }
       },
-      "interactivity": {
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
         }
       },
-      "retina_detect": true
+      retina_detect: true
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // Filterable Portfolio
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          item.style.display = (filter === 'all' || item.classList.contains(filter)) ? 'block' : 'none';
+        });
+      });
     });
   </script>
 </body>
-
 </html>
